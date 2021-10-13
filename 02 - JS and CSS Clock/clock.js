@@ -1,10 +1,8 @@
+"use strict";
 setInterval(() => {
-    const test = document.querySelector('.seconds-hand');
-    console.log(test);
     const now = new Date();
     const secondsDegrees = (now.getSeconds() * 6 + 90) % 360;
     const secondsHand = document.querySelector('.seconds-hand');
-    console.log(secondsHand);
     secondsHand.style.transform = `rotate(${secondsDegrees}deg)`;
     const minutesDegrees = (now.getMinutes() * 6 + 90) % 360;
     const minutesHand = document.querySelector('.minutes-hand');

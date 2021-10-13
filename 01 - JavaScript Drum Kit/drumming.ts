@@ -20,8 +20,8 @@ window.addEventListener('keydown', (ev) => {
 // Events registrieren für Ende der CSS-Transitions
 const keyButtons = document.querySelectorAll('.note-key');
 for(const keyButton of keyButtons) {
-    keyButton.addEventListener('transitionend', (te: TransitionEvent) => {
-        if(te.propertyName === 'transform') {
+    keyButton.addEventListener('transitionend', (te) => {
+        if((te as TransitionEvent).propertyName === 'transform') {
             keyButton.classList.remove('note-key-playing');
         }
     });

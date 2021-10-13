@@ -1,3 +1,4 @@
+"use strict";
 window.addEventListener('keydown', (ev) => {
     var keyPressed = ev.key.toUpperCase();
     if (keyPressed >= 'A' && keyPressed <= 'Z') {
