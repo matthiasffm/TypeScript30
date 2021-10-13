@@ -1,6 +1,6 @@
 window.addEventListener('keydown', (ev) => {
 
-    var keyPressed = ev.key.toUpperCase();
+    const keyPressed = ev.key.toUpperCase();
     if(keyPressed >= 'A' && keyPressed <= 'Z') {
 
         const audioElem = document.querySelector(`audio[data-key=${keyPressed}]`) as HTMLAudioElement;
@@ -19,7 +19,7 @@ window.addEventListener('keydown', (ev) => {
 
 // Events registrieren für Ende der CSS-Transitions
 const keyButtons = document.querySelectorAll('.note-key');
-for(const keyButton of keyButtons) {
+for(let keyButton of keyButtons) {
     keyButton.addEventListener('transitionend', (te) => {
         if((te as TransitionEvent).propertyName === 'transform') {
             keyButton.classList.remove('note-key-playing');
