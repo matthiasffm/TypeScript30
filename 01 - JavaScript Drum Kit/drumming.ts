@@ -1,4 +1,4 @@
-window.addEventListener('keydown', (ev) => {
+window.addEventListener('keydown', ev => {
 
     const keyPressed = ev.key.toUpperCase();
     if(keyPressed >= 'A' && keyPressed <= 'Z') {
@@ -20,7 +20,7 @@ window.addEventListener('keydown', (ev) => {
 // Events registrieren für Ende der CSS-Transitions
 const keyButtons = document.querySelectorAll('.note-key');
 for(let keyButton of keyButtons) {
-    keyButton.addEventListener('transitionend', (te) => {
+    keyButton.addEventListener('transitionend', te => {
         if((te as TransitionEvent).propertyName === 'transform') {
             keyButton.classList.remove('note-key-playing');
         }
