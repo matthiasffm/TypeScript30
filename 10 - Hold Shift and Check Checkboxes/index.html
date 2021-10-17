@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Typescript-30 Lesson 10 - Hold Shift and Check Checkboxes">
+    <meta name="author"      content="Matthias Schmidt">
+
+    <title>Typescript-30 Lesson 10 - Hold Shift and Check Checkboxes</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <!--
+        Typisches Layout für die Liste der Nachrichten in einem simplen Email client.
+        Wenn ein Nutzer die Shift-Taste gedrückt hält beim Selektieren einer Checkbox, kann
+        er alle die Checkboxen (de)aktivieren, bis zu denen wo er erneut klickt.
+    -->
+  <div class="inbox">
+    <div class="item">
+      <input type="checkbox">
+      <p>This is an inbox layout.</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Check one item</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Hold down your Shift key</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Check a lower item</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Everything in between should also be set to checked</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Try to do it without any libraries</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Just regular JavaScript</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Good Luck!</p>
+    </div>
+    <div class="item">
+      <input type="checkbox">
+      <p>Don't forget to tweet your result!</p>
+    </div>
+  </div>
+</body>
+
+<script src="holdshifttocheck.js"></script>
+
+</html>
