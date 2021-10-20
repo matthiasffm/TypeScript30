@@ -70,12 +70,25 @@ h2 {
   content: "🌮";
 }
 
-.add-items {
+.add-item {
   margin-top: 20px;
 }
 
-.add-items input {
+.add-item input {
   padding: 10px;
   outline: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.list-manipulation {
+  display: flex;
+  flex-flow: row;
+}
+
+.list-manipulation input {
+  outline: 0;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  flex: 1;
 }
