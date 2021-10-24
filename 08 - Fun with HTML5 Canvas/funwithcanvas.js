@@ -1,16 +1,12 @@
 "use strict";
 const canvas = document.querySelector('#draw');
 const ctx2D = canvas.getContext('2d');
-// resize Canvas auf Größe des Browserfensters (muss das nicht in einem Resize-Event auch passieren?)
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-// Zeichenstile initialisieren
 if (ctx2D) {
     ctx2D.lineCap = 'round';
     ctx2D.lineJoin = 'round';
-    ctx2D.globalCompositeOperation = 'color-burn';
 }
-// Logik und Events initialisieren
 let isMouseDown = false;
 let lastX = 0;
 let lastY = 0;
@@ -31,7 +27,6 @@ function restartDrawing(currentX, currentY) {
     width = 10;
     isMouseDown = true;
 }
-// Linie von letzter Pos auf aktuelle Mauspos zeichnen
 function drawLineTo(currentX, currentY) {
     if (ctx2D) {
         ctx2D.lineWidth = width;
@@ -46,3 +41,4 @@ function drawLineTo(currentX, currentY) {
     lastX = currentX;
     lastY = currentY;
 }
+//# sourceMappingURL=funwithcanvas.js.map

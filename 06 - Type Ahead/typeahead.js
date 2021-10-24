@@ -26,12 +26,10 @@ function onSearchPatternChanged(e) {
         `).join('');
     }
 }
-// sucht case insensitive nach passenden Städten und Staaten und liefert
-// die größten 10 zurück
 function findMatchingCities(pattern, toSearch) {
     const regEx = new RegExp(pattern, "i");
     return toSearch.filter(c => c.city.match(regEx) || c.state.match(regEx))
-        // TODO: filtern nach den am nächsten gelegenen Städten statt der Bevölkerungsanzahl
         .sort((c1, c2) => Number(c2.population) - Number(c1.population))
         .slice(0, 10);
 }
+//# sourceMappingURL=typeahead.js.map

@@ -47,7 +47,6 @@ if (player) {
         const percent = Math.floor(viewer.currentTime * 100 / viewer.duration);
         progressBar.style.flexBasis = `${percent}%`;
     }
-    // TODO: unschönen switch ersetzen durch getrennte Handler für changeVolume und changePlaybackRate
     function updateRange(rangeToChange, newValue) {
         switch (rangeToChange) {
             case 'volume':
@@ -61,3 +60,4 @@ if (player) {
         }
     }
 }
+//# sourceMappingURL=videoplayer.js.map

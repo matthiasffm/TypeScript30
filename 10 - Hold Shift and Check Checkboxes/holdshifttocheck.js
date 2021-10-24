@@ -5,7 +5,6 @@ const checkboxes = [...document.querySelectorAll(".inbox input[type='checkbox']"
 for (let checkbox of checkboxes) {
     checkbox.addEventListener('click', e => onCheckboxClicked(e));
 }
-// merke Status der Shift-Taste
 document.addEventListener('keydown', e => {
     if (e.shiftKey) {
         shiftState = true;
@@ -17,13 +16,9 @@ document.addEventListener('keyup', e => {
         checkFrom = null;
     }
 });
-// Hakt alle Checkboxen in dem Intervall von der letzten selektierten Checkbox (checkFrom) bis
-// zur aktuell selektieren an.
 function onCheckboxClicked(e) {
     const checkbox = e.target;
     if (!checkbox.checked) {
-        // Haken entfernen per Shift nicht implementiert
-        // TODO: deselktieren ebenfalls per Shift behandeln
         console.log(`unchecked not handled`);
         return;
     }
@@ -38,9 +33,9 @@ function onCheckboxClicked(e) {
         range(checkFromIdx, checkUntilIdx).forEach(i => checkboxes[i].checked = true);
     }
 }
-// Iterator über Zahlenbereich unabhängig von der Richtug
 function range(from, to) {
     const length = Math.abs(to - from) + 1;
     const dir = Math.sign(to - from);
     return Array.from({ length }, (_, i) => from + i * dir);
 }
+//# sourceMappingURL=holdshifttocheck.js.map

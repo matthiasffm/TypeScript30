@@ -1,8 +1,6 @@
 "use strict";
 const images = Array.from(document.querySelectorAll('.slide-in'));
 window.addEventListener('scroll', debounce(scrollSlide));
-// schiebt die Bilder horizontal rein oder raus, wenn sie zu mehr als der halben Höhe in den sichtbaren
-// Bereich des Browserfensters gescrollt werden.
 function scrollSlide(e) {
     const windowBottom = window.scrollY + window.innerHeight;
     images.forEach(image => {
@@ -14,8 +12,6 @@ function scrollSlide(e) {
         }
     });
 }
-// ruft den $func-callback in Intervallen von maximal $wait ms auf, unabhängig wie
-// oft und schnell der callback selber von außen getriggert wird
 function debounce(func, wait = 20, immediate = true) {
     var timerId;
     const context = this;
@@ -34,3 +30,4 @@ function debounce(func, wait = 20, immediate = true) {
         }
     };
 }
+//# sourceMappingURL=slidein.js.map

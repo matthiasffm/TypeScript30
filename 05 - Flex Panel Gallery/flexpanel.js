@@ -3,7 +3,6 @@ const panels = document.querySelectorAll('.panel');
 for (let panel of panels) {
     panel.addEventListener('click', e => {
         panel.classList.toggle('open');
-        /* optional: open für alle anderen panels entfernen so dass nur eines immer aktiv sein kann */
         for (let panelsToClose of panels) {
             if (panelsToClose !== panel) {
                 panelsToClose.classList.remove('open');
@@ -17,3 +16,4 @@ for (let panel of panels) {
         }
     });
 }
+//# sourceMappingURL=flexpanel.js.map

@@ -29,3 +29,4 @@ function isPrefix(prefix, arr) {
     return prefix.filter((elem, idx) => elem === arr[idx])
         .length === prefix.length;
 }
+//# sourceMappingURL=konamicode.js.map

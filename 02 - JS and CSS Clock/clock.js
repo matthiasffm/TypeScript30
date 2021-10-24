@@ -11,3 +11,4 @@ setInterval(() => {
     const hoursHand = document.querySelector('.hours-hand');
     hoursHand.style.transform = `rotate(${hoursDegrees}deg)`;
 }, 1000);
+//# sourceMappingURL=clock.js.map

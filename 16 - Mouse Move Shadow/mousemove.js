@@ -16,3 +16,4 @@ function moveShadow(e) {
         heroText.style.textShadow = `${Math.round(-shadowX)}px ${Math.round(-shadowY)}px 3px darkgrey`;
     }
 }
+//# sourceMappingURL=mousemove.js.map

@@ -16,22 +16,16 @@ const inventors = [
 function lifeLength(inv) {
     return inv.passed - inv.born;
 }
-// 1. Filter the list of inventors for those who were born in the 1500's
 const born1500s = inventors.filter(i => i.born >= 1500 && i.born < 1600);
 console.table(born1500s);
-// 2. Give us an array of the inventors first and last names
 const fullNames = inventors.map(i => `${i.first} ${i.last}`);
 console.log(fullNames);
-// 3. Sort the inventors by birthdate, oldest to youngest
 const sortedByBirthAsc = inventors.sort((inv1, inv2) => inv1.born - inv2.born);
 console.table(sortedByBirthAsc);
-// 4. How many years did all the inventors live all together?
 const sumLifeLength = inventors.reduce((sum, i) => sum + lifeLength(i), 0);
 console.log(sumLifeLength);
-// 5. Sort the inventors by years lived
 const sortedByLifeLengthDesc = inventors.sort((inv1, inv2) => lifeLength(inv2) - lifeLength(inv1));
 console.table(sortedByLifeLengthDesc);
-// 7. Sort these names alphabetically by last name
 const names = [
     'Bernhard, Sandra', 'Bethea, Erin', 'Becker, Carl', 'Bentsen, Lloyd', 'Beckett, Samuel', 'Blake, William', 'Berger, Ric', 'Beddoes, Mick', 'Beethoven, Ludwig',
     'Belloc, Hilaire', 'Begin, Menachem', 'Bellow, Saul', 'Benchley, Robert', 'Blair, Robert', 'Benenson, Peter', 'Benjamin, Walter', 'Berlin, Irving',
@@ -43,10 +37,10 @@ const sortedByLastNameAsc = names.map(n => n.split(','))
     .map(n => ({ last: n[0], first: n[1] }))
     .sort((p1, p2) => p1.last.localeCompare(p2.last));
 console.table(sortedByLastNameAsc);
-// 8. Sum up the instances of each of these
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
 const summedUpData = data.reduce((dict, str) => {
     dict[str] = dict[str] === undefined ? 1 : dict[str] + 1;
     return dict;
 }, {});
 console.table(summedUpData);
+//# sourceMappingURL=arraycardio.js.map
